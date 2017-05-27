@@ -1,7 +1,9 @@
 package Records;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * Created by andrewcabrera on 5/25/17.
@@ -20,5 +22,23 @@ public class RecordModel {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public ResultSet getArtistList() {
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        ResultSet resultSet;
+
+        try {
+            resultSet = statement.executeQuery("SELECT * FROM Artists");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            resultSet = null;
+        }
+        return resultSet;
     }
 }
