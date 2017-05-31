@@ -41,4 +41,17 @@ public class RecordModel {
         }
         return resultSet;
     }
+
+    public void saveChangedItem(ArtistName artist, String name) {
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate("UPDATE Artists " +
+                    "set Name = '" + artist.getName() + "',  Copies = '" + artist.getQuantity() +"'" +
+                    " WHERE Artists.Name = '" + name +"'");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

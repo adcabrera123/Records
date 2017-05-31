@@ -1,21 +1,19 @@
 package Records;
- import javafx.beans.property.SimpleStringProperty;
- import javafx.beans.value.ObservableValue;
+
  import javafx.collections.FXCollections;
  import javafx.collections.ObservableList;
  import javafx.fxml.FXML;
  import javafx.fxml.Initializable;
- import javafx.scene.Parent;
- import javafx.scene.control.ListView;
- import javafx.scene.control.SelectionMode;
+
+ import javafx.scene.control.TableColumn.CellEditEvent;
  import javafx.scene.control.TableColumn;
  import javafx.scene.control.TableView;
  import javafx.scene.control.cell.PropertyValueFactory;
- import javafx.util.Callback;
+ import javafx.scene.control.cell.TextFieldTableCell;
 
+ import javafx.event.EventHandler;
  import java.net.URL;
  import java.sql.*;
- import java.util.ArrayList;
  import java.util.ResourceBundle;
 
 
@@ -23,18 +21,23 @@ package Records;
  * Created by andrewcabrera on 5/24/17.
  */
 public class RecordOutputController  implements Initializable {
+
    private RecordModel recordModel = new RecordModel();
 
 
+   //right tableView
     @FXML
    public TableView allDetailsForArtistView;
 
+    //left Tableview
    @FXML
    public TableView<ArtistName> artistSelectorView;
 
+   //list name for artistSelector
    @FXML
    private TableColumn artistNameCol;
 
+   //List Quantity for ArtistSelector
    @FXML
    private TableColumn quantityCol;
 
@@ -45,7 +48,22 @@ public class RecordOutputController  implements Initializable {
              System.out.println("connection successful");
              artistNameCol.setCellValueFactory(new PropertyValueFactory<ArtistName,String>("name"));
              quantityCol.setCellValueFactory(new PropertyValueFactory<ArtistName, String>("quantity"));
+             artistNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
+             artistNameCol.setOnEditCommit(new EventHandler<CellEditEvent<ArtistName, String>>() {
+                 @Override
+                 public void handle(TableColumn.CellEditEvent<ArtistName, String> t) {
+                     String oldName;
+                     ArtistName artistChanged = null;
+                     oldName = (t.getOldValue());
+                     artistChanged  = ((ArtistName) t.getTableView().getItems().get(
+                              t.getTablePosition().getRow())
+                      );
+                     artistChanged.setName(t.getNewValue());
+                     recordModel.saveChangedItem(artistChanged, oldName);
+                 }
 
+             });
+             quantityCol.setCellFactory(TextFieldTableCell.forTableColumn());
              updateArtistSelectorView();
          } else {
              System.out.println("Not connected");
@@ -75,4 +93,12 @@ public class RecordOutputController  implements Initializable {
            e.printStackTrace();
        }
    }
+
+   private void addNewEditableCell() {
+
+   }
+
+
+
+
 }
