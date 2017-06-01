@@ -62,25 +62,16 @@ public class RecordModel {
     }
 
     public void saveChangedItem(ArtistName artist, String name) {
-//        Statement statement = null;
 
         try {
-//            statement = connection.createStatement();
             String queryString = "UPDATE Artists set Name = ?, Copies = ? WHERE Artists.Name = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(queryString);
             preparedStatement.setString(1, artist.getName());
             preparedStatement.setString(2, artist.getQuantity());
             preparedStatement.setString(3, name);
-            System.out.println(queryString);
-            preparedStatement.executeUpdate();
 
-            System.out.println("anem is :" + name);
-            System.out.println("Artist anme is: " + artist.getName());
-//            statement.executeUpdate("UPDATE Artists " +
-//                    "set Name = '" + artist.getName() + "',  Copies = '" + artist.getQuantity() +"'" +
-//                    " WHERE Artists.Name = '" + name +"'");
-//            statement.close();
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -99,10 +90,46 @@ public class RecordModel {
             preparedStatement.setString(5, oldAlbum);
 
             preparedStatement.executeUpdate();
+            System.out.println("UPDATE " + artist);
+            System.out.println("Album = " + items.getAlbum());
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
 
+    public void createNewTableForArtist(String artist) {
+        try {
+            String queryString = "Create Table " + artist + " (Quantity INT, Year INT, Variant CHAR(100), Album CHAR(100))";
+            PreparedStatement preparedStatement = connection.prepareStatement(queryString);
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addNewArtistToTable(String artist) {
+        try {
+            String queryString = "insert into Artists (Name, Copies) VALUES (?, 0)";
+
+            PreparedStatement preparedStatement = connection.prepareStatement(queryString);
+            preparedStatement.setString(1, artist);
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public void creatNewRow(String name) {
+        try {
+            String queryString = "Insert into " + name + " (Quantity, Year, Variant, Album) VALUES (null, null, null, null)";
+            PreparedStatement preparedStatement = connection.prepareStatement(queryString);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

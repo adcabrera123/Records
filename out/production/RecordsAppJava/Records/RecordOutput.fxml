@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="518.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Records.RecordOutputController">
+<AnchorPane prefHeight="679.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Records.RecordOutputController">
    <children>
-      <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="679.0" prefWidth="948.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="278.0">
                <children>
                   <TableView fx:id="artistSelectorView" editable="true" onMouseClicked="#clickItem" prefHeight="518.0" prefWidth="242.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
@@ -25,7 +26,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TableView fx:id="allDetailsForArtistView" editable="true" prefHeight="518.0" prefWidth="576.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="allDetailsForArtistView" editable="true" prefHeight="400.0" prefWidth="416.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
                       <TableColumn fx:id="Album" prefWidth="75.0" text="Album" />
                       <TableColumn fx:id="Quantity" prefWidth="75.0" text="Quantity" />
@@ -40,7 +41,6 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <Button layoutX="2.0" mnemonicParsing="false" text="+" />
-      <HBox layoutY="532.0" prefHeight="36.0" prefWidth="242.0" />
+      <Button fx:id="addNewArtistButton" layoutX="2.0" mnemonicParsing="false" text="+" />
    </children>
 </AnchorPane>

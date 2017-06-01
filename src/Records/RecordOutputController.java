@@ -2,10 +2,16 @@ package Records;
 
  import javafx.collections.FXCollections;
  import javafx.collections.ObservableList;
+ import javafx.event.ActionEvent;
  import javafx.event.Event;
  import javafx.fxml.FXML;
+ import javafx.fxml.FXMLLoader;
  import javafx.fxml.Initializable;
 
+ import javafx.scene.Node;
+ import javafx.scene.Parent;
+ import javafx.scene.Scene;
+ import javafx.scene.control.Button;
  import javafx.scene.control.TableColumn.CellEditEvent;
  import javafx.scene.control.TableColumn;
  import javafx.scene.control.TableView;
@@ -14,7 +20,9 @@ package Records;
 
  import javafx.event.EventHandler;
  import javafx.scene.input.MouseEvent;
+ import javafx.stage.Stage;
 
+ import java.io.IOException;
  import java.net.URL;
  import java.sql.*;
  import java.util.ResourceBundle;
@@ -56,6 +64,9 @@ public class RecordOutputController  implements Initializable {
     @FXML
     private TableColumn<RecordItems, String> Album;
 
+    @FXML
+    private Button addNewArtistButton;
+
 
 
 
@@ -83,6 +94,22 @@ public class RecordOutputController  implements Initializable {
              Album.setCellFactory(TextFieldTableCell.forTableColumn());
              Album.setOnEditCommit(artistItemCellModified);
 
+             addNewArtistButton.setOnAction(new EventHandler<>() {
+              public void handle(ActionEvent event) {
+                  Parent root;
+                  try {
+                      root = FXMLLoader.load(getClass().getResource("/Records/AddNewArtistPage.fxml"));
+                      Stage stage = new Stage();
+                      stage.setTitle("My New Stage Title");
+                      stage.setScene(new Scene(root, 450, 450));
+                      stage.show();
+                  }
+                  catch (IOException e) {
+                      e.printStackTrace();
+                  }
+              }
+          });
+
              updateArtistSelectorView();
          } else {
              System.out.println("Not connected");
@@ -92,23 +119,27 @@ public class RecordOutputController  implements Initializable {
    private void updateAllDetailsForArtistView(String artist) {
        ObservableList<RecordItems> data  = FXCollections.observableArrayList();
 
-       ResultSet resultSet = recordModel.getArtistItems(artist);
+       if (artist != "") {
+           ResultSet resultSet = recordModel.getArtistItems(artist);
 
-       if (resultSet == null)
-           System.out.println("could not update the Items");
-       else try {
-           while (resultSet.next()) {
-               RecordItems recordItems = new RecordItems(resultSet.getString(1), resultSet.getString(2),
-                       resultSet.getString(3), resultSet.getString(4));
+           if (resultSet == null)
+               System.out.println("could not update the Items");
+           else try {
+               while (resultSet.next()) {
+                   RecordItems recordItems = new RecordItems(resultSet.getString(1), resultSet.getString(2),
+                           resultSet.getString(3), resultSet.getString(4));
+                   data.add(recordItems);
+                   recordItems.setName(artist);
+               } //end while
+               RecordItems recordItems = new RecordItems("", "", "", "");
+               recordItems.setName(artist);
                data.add(recordItems);
-                recordItems.setName(artist);
-           } //end while
-
-
-           allDetailsForArtistView.setItems(data);
-       } catch (SQLException e) {
-           e.printStackTrace();
-       }
+               allDetailsForArtistView.setItems(data);
+           } catch (SQLException e) {
+               e.printStackTrace();
+           }
+       } else
+           System.out.println("Empty Cell");
    }
 
 
@@ -122,9 +153,9 @@ public class RecordOutputController  implements Initializable {
            while (resultSet.next()) {
                ArtistName artist = new ArtistName(resultSet.getString(1), resultSet.getString(2));
                data.add(artist);
-               artist.print();
            }
-
+                ArtistName artist = new ArtistName("", "");
+                data.add(artist);
            artistSelectorView.setItems(data);
        } catch (SQLException e) {
            e.printStackTrace();
@@ -149,12 +180,24 @@ public class RecordOutputController  implements Initializable {
             String oldName = artistChanged.getName();
             TableColumn col = t.getTableColumn();
 
-            if (col == artistNameCol)
-                artistChanged.setName(t.getNewValue());
-            else
-                artistChanged.setQuantity(t.getNewValue());
+            if (oldName != "")
+            {
+                if (col == artistNameCol)
+                    artistChanged.setName(t.getNewValue());
+                else
+                    artistChanged.setQuantity(t.getNewValue());
 
-            recordModel.saveChangedItem(artistChanged, oldName);
+                recordModel.saveChangedItem(artistChanged, oldName);
+            } else if (oldName == "") {
+                if (col == artistNameCol)
+                {
+                    recordModel.createNewTableForArtist(t.getNewValue());
+                    recordModel.addNewArtistToTable(t.getNewValue());
+                    recordModel.creatNewRow(t.getNewValue());
+                    updateArtistSelectorView();
+                }
+            }
+
         }
 
     };
@@ -179,5 +222,6 @@ public class RecordOutputController  implements Initializable {
         }
         recordModel.saveNewArtistItem(changedItemObject, albumName, changedItemObject.getName());
     };
+
 
 }
