@@ -12,7 +12,7 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TableView fx:id="artistSelectorView" editable="true" prefHeight="518.0" prefWidth="242.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="artistSelectorView" editable="true" onMouseClicked="#clickItem" prefHeight="518.0" prefWidth="242.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
                       <TableColumn fx:id="artistNameCol" prefWidth="75.0" text="Artists" />
                       <TableColumn fx:id="quantityCol" prefWidth="75.0" text="Quantity" />
@@ -27,10 +27,10 @@
                <children>
                   <TableView fx:id="allDetailsForArtistView" editable="true" prefHeight="518.0" prefWidth="576.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="Album" />
-                      <TableColumn prefWidth="75.0" text="Quantity" />
-                        <TableColumn prefWidth="75.0" text="Year" />
-                        <TableColumn prefWidth="75.0" text="Variant" />
+                      <TableColumn fx:id="Album" prefWidth="75.0" text="Album" />
+                      <TableColumn fx:id="Quantity" prefWidth="75.0" text="Quantity" />
+                        <TableColumn fx:id="Year" prefWidth="75.0" text="Year" />
+                        <TableColumn fx:id="Variant" prefWidth="75.0" text="Variant" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
