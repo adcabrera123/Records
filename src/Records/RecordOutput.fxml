@@ -41,6 +41,5 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <Button fx:id="addNewArtistButton" layoutX="2.0" mnemonicParsing="false" text="+" />
    </children>
 </AnchorPane>

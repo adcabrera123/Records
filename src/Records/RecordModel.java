@@ -39,6 +39,7 @@ public class RecordModel {
         return resultSet;
     }
 
+
     public ResultSet getArtistItems(String artistTable) {
         Statement statement = null;
 
@@ -72,6 +73,8 @@ public class RecordModel {
             preparedStatement.setString(3, name);
 
             preparedStatement.executeUpdate();
+
+            preparedStatement.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -79,19 +82,21 @@ public class RecordModel {
 
     public void saveNewArtistItem(RecordItems items, String oldAlbum, String artist) {
         try {
-            String queryString = "UPDATE "+ artist +" set Album = ?, Year = ?, Variant = ?, Quantity = ?" +
-                    "WHERE " + artist + ".Album = ?";
+            String queryString;
+                 queryString = "UPDATE "+ artist +" set Album = ?, Year = ?, Variant = ?, Quantity = ?" +
+                        " WHERE " + artist + ".Album = ?";
 
-            PreparedStatement preparedStatement = connection.prepareStatement(queryString);
-            preparedStatement.setString(1, items.getAlbum());
-            preparedStatement.setString(2, items.getYear());
-            preparedStatement.setString(3, items.getVariant());
-            preparedStatement.setString(4, items.getQuantity());
-            preparedStatement.setString(5, oldAlbum);
 
-            preparedStatement.executeUpdate();
-            System.out.println("UPDATE " + artist);
-            System.out.println("Album = " + items.getAlbum());
+                PreparedStatement preparedStatement = connection.prepareStatement(queryString);
+
+                preparedStatement.setString(1, items.getAlbum());
+                preparedStatement.setString(2, items.getYear());
+                preparedStatement.setString(3, items.getVariant());
+                preparedStatement.setString(4, items.getQuantity());
+                preparedStatement.setString(5, oldAlbum);
+                preparedStatement.executeUpdate();
+                preparedStatement.close();
+
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -104,7 +109,7 @@ public class RecordModel {
             PreparedStatement preparedStatement = connection.prepareStatement(queryString);
 
             preparedStatement.executeUpdate();
-
+            preparedStatement.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -112,24 +117,43 @@ public class RecordModel {
 
     public void addNewArtistToTable(String artist) {
         try {
-            String queryString = "insert into Artists (Name, Copies) VALUES (?, 0)";
+            String queryString = "INSERT INTO Artists (Name, Copies) VALUES (?, 0)";
 
             PreparedStatement preparedStatement = connection.prepareStatement(queryString);
             preparedStatement.setString(1, artist);
 
             preparedStatement.executeUpdate();
-
+            preparedStatement.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
     public void creatNewRow(String name) {
         try {
-            String queryString = "Insert into " + name + " (Quantity, Year, Variant, Album) VALUES (null, null, null, null)";
+            String queryString = "INSERT INTO " + name + " (Quantity, Year, Variant, Album) VALUES ('', '', '', '')";
             PreparedStatement preparedStatement = connection.prepareStatement(queryString);
             preparedStatement.executeUpdate();
+            preparedStatement.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
+    public void deleteArtistAndInformation(String artist) {
+        String query = "DROP TABLE " + artist;
+        String query1 = "DELETE FROM Artists WHERE Artists.Name == ?";
+
+        try {
+            PreparedStatement dropTable = connection.prepareStatement(query);
+            dropTable.executeUpdate();
+
+            PreparedStatement deleteFromArtistsTable = connection.prepareStatement(query1);
+            deleteFromArtistsTable.setString(1, artist);
+            deleteFromArtistsTable.executeUpdate();
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 }

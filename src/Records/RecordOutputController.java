@@ -2,27 +2,18 @@ package Records;
 
  import javafx.collections.FXCollections;
  import javafx.collections.ObservableList;
- import javafx.event.ActionEvent;
- import javafx.event.Event;
  import javafx.fxml.FXML;
- import javafx.fxml.FXMLLoader;
  import javafx.fxml.Initializable;
 
- import javafx.scene.Node;
- import javafx.scene.Parent;
- import javafx.scene.Scene;
- import javafx.scene.control.Button;
+ import javafx.scene.control.*;
  import javafx.scene.control.TableColumn.CellEditEvent;
- import javafx.scene.control.TableColumn;
- import javafx.scene.control.TableView;
  import javafx.scene.control.cell.PropertyValueFactory;
  import javafx.scene.control.cell.TextFieldTableCell;
 
  import javafx.event.EventHandler;
+ import javafx.scene.input.MouseButton;
  import javafx.scene.input.MouseEvent;
- import javafx.stage.Stage;
 
- import java.io.IOException;
  import java.net.URL;
  import java.sql.*;
  import java.util.ResourceBundle;
@@ -34,17 +25,20 @@ package Records;
 public class RecordOutputController  implements Initializable {
 
    private RecordModel recordModel = new RecordModel();
+   private MenuItem men = new MenuItem("Delete");
+   private  ContextMenu deleteItemFromSelectorView = new ContextMenu(men);
 
 
-   //right tableView
+
+   //lists all albums and informatin for Artist
     @FXML
    public TableView<RecordItems> allDetailsForArtistView;
 
-    //left Tableview
+    //lists Artists in the DB
    @FXML
    public TableView<ArtistName> artistSelectorView;
 
-   //list name for artistSelector
+   //List the names of the artists
    @FXML
    private TableColumn<ArtistName, String> artistNameCol;
 
@@ -52,34 +46,33 @@ public class RecordOutputController  implements Initializable {
    @FXML
    private TableColumn<ArtistName, String> quantityCol;
 
+   //number of copies of a record
    @FXML
    private TableColumn<RecordItems, String> Quantity;
 
+   //year album was acquired
    @FXML
    private TableColumn<RecordItems, String> Year;
 
+   //description of Record variant
     @FXML
     private TableColumn<RecordItems, String> Variant;
 
+    //Album title
     @FXML
     private TableColumn<RecordItems, String> Album;
-
-    @FXML
-    private Button addNewArtistButton;
-
-
 
 
     @Override
    public void initialize(URL location, ResourceBundle resources) {
          if (recordModel.isDbConnected()) {
              System.out.println("connection successful");
+
              artistNameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
              quantityCol.setCellValueFactory(new PropertyValueFactory<>("quantity"));
              artistNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
              artistNameCol.setOnEditCommit(artistSelectorCellModified);
-             quantityCol.setOnEditCommit(artistSelectorCellModified);
-             quantityCol.setCellFactory(TextFieldTableCell.forTableColumn());
+             artistNameCol.setContextMenu(deleteItemFromSelectorView);
 
              Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
              Year.setCellValueFactory(new PropertyValueFactory<>("Year"));
@@ -93,23 +86,9 @@ public class RecordOutputController  implements Initializable {
              Variant.setOnEditCommit(artistItemCellModified);
              Album.setCellFactory(TextFieldTableCell.forTableColumn());
              Album.setOnEditCommit(artistItemCellModified);
-
-             addNewArtistButton.setOnAction(new EventHandler<>() {
-              public void handle(ActionEvent event) {
-                  Parent root;
-                  try {
-                      root = FXMLLoader.load(getClass().getResource("/Records/AddNewArtistPage.fxml"));
-                      Stage stage = new Stage();
-                      stage.setTitle("My New Stage Title");
-                      stage.setScene(new Scene(root, 450, 450));
-                      stage.show();
-                  }
-                  catch (IOException e) {
-                      e.printStackTrace();
-                  }
-              }
-          });
-
+            men.setOnAction(event ->  {recordModel.deleteArtistAndInformation(
+                    artistSelectorView.getSelectionModel().getSelectedItem().getName());
+                    updateArtistSelectorView();});
              updateArtistSelectorView();
          } else {
              System.out.println("Not connected");
@@ -118,7 +97,6 @@ public class RecordOutputController  implements Initializable {
 
    private void updateAllDetailsForArtistView(String artist) {
        ObservableList<RecordItems> data  = FXCollections.observableArrayList();
-
        if (artist != "") {
            ResultSet resultSet = recordModel.getArtistItems(artist);
 
@@ -131,9 +109,11 @@ public class RecordOutputController  implements Initializable {
                    data.add(recordItems);
                    recordItems.setName(artist);
                } //end while
-               RecordItems recordItems = new RecordItems("", "", "", "");
+
+               RecordItems recordItems = new RecordItems(" ", " ", " ", " ");
                recordItems.setName(artist);
                data.add(recordItems);
+
                allDetailsForArtistView.setItems(data);
            } catch (SQLException e) {
                e.printStackTrace();
@@ -165,12 +145,16 @@ public class RecordOutputController  implements Initializable {
     @FXML
     public void clickItem(MouseEvent event)
     {
-        if (event.getClickCount() == 1)
+        if (event.getButton() == MouseButton.SECONDARY)
         {
-            updateAllDetailsForArtistView(artistSelectorView.getSelectionModel().getSelectedItem().getName());
+            deleteItemFromSelectorView.show(artistSelectorView, event.getScreenX(), event.getScreenY());
 
+        } else if (event.getClickCount() == 1) {
+            updateAllDetailsForArtistView(artistSelectorView.getSelectionModel().getSelectedItem().getName());
+            deleteItemFromSelectorView.hide();
         }
     }
+
 
 
     private EventHandler artistSelectorCellModified = new EventHandler<CellEditEvent<ArtistName, String>>() {
