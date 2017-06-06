@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Records/RecordOutputController.java" line="179" />
+    <bookmark url="file://$PROJECT_DIR$/src/Records/RecordOutputController.java" line="205" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="working on updating the Save feature">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/RecordModel.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/RecordOutputController$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/RecordOutputController$2.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/RecordOutputController.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/_metadata_/metadata" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/RecordModel.class" afterPath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/RecordModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/jdbc:sqlite:" afterPath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/jdbc:sqlite:" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Records/jdbc:sqlite:" afterPath="$PROJECT_DIR$/src/Records/jdbc:sqlite:" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/RecordOutput.fxml" afterPath="$PROJECT_DIR$/out/production/RecordsAppJava/Records/RecordOutput.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Records/RecordItems.java" afterPath="$PROJECT_DIR$/src/Records/RecordItems.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Records/RecordModel.java" afterPath="$PROJECT_DIR$/src/Records/RecordModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Records/RecordOutput.fxml" afterPath="$PROJECT_DIR$/src/Records/RecordOutput.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Records/RecordOutputController.java" afterPath="$PROJECT_DIR$/src/Records/RecordOutputController.java" />
@@ -31,7 +32,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/RecordsAppJava$Main.coverage" NAME="Main Coverage Results" MODIFIED="1496610972315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/RecordsAppJava$Main.coverage" NAME="Main Coverage Results" MODIFIED="1496693871996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>sample.*</FILTER>
     </SUITE>
   </component>
@@ -114,66 +115,72 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43007222">
+    <splitter split-orientation="horizontal" split-proportion="0.64709944">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="RecordOutputController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Records/RecordOutputController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="292">
-                  <caret line="73" column="71" lean-forward="false" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RecordModel.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="RecordModel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Records/RecordModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="626">
-                  <caret line="159" column="8" lean-forward="false" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="8" />
+                <state relative-caret-position="3360">
+                  <caret line="224" column="30" lean-forward="false" selection-start-line="224" selection-start-column="30" selection-end-line="224" selection-end-column="30" />
                   <folding>
-                    <marker date="1496620838000" expanded="true" signature="793:814" ph="SELECT * FRO... Artists" />
-                    <marker date="1496620838000" expanded="true" signature="1294:1307" ph="SELECT * FRO... " />
-                    <marker date="1496620838000" expanded="true" signature="1294:1309" ph="SELECT * FRO... " />
-                    <marker date="1496620838000" expanded="true" signature="1294:1328" ph="SELECT * FRO... missingValue" />
-                    <marker date="1496620838000" expanded="true" signature="1589:1651" ph="UPDATE Artis... " />
-                    <marker date="1496620838000" expanded="true" signature="2263:2393" ph="UPDATE missi... " />
-                    <marker date="1496620838000" expanded="true" signature="3107:3120" ph="Create Table... missingValue" />
-                    <marker date="1496620838000" expanded="true" signature="3107:3195" ph="Create Table... ?" />
-                    <marker date="1496620838000" expanded="true" signature="3563:3611" ph="INSERT INTO Artists... " />
-                    <marker date="1496620838000" expanded="true" signature="3569:3611" ph="insert into Artists... " />
-                    <marker date="1496620838000" expanded="true" signature="4021:4102" ph="INSERT INTO missingValue... " />
-                    <marker date="1496620838000" expanded="true" signature="4027:4102" ph="Insert into missingValue... " />
-                    <marker date="1496620838000" expanded="true" signature="4452:4463" ph="DROP table m... " />
-                    <marker date="1496620838000" expanded="true" signature="4500:4541" ph="DELETE FROM " />
-                    <marker date="1496620838000" expanded="true" signature="4500:4543" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="794:815" ph="SELECT * FRO... Artists" />
+                    <marker date="1496717607000" expanded="true" signature="1295:1308" ph="SELECT * FRO... " />
+                    <marker date="1496717607000" expanded="true" signature="1295:1310" ph="SELECT * FRO... " />
+                    <marker date="1496717607000" expanded="true" signature="1295:1329" ph="SELECT * FRO... missingValue" />
+                    <marker date="1496717607000" expanded="true" signature="1590:1652" ph="UPDATE Artis... " />
+                    <marker date="1496717607000" expanded="true" signature="2269:2322" ph="UPDATE Artis... " />
+                    <marker date="1496717607000" expanded="true" signature="3069:3204" ph="UPDATE missi... " />
+                    <marker date="1496717607000" expanded="true" signature="4120:4133" ph="Create Table... missingValue" />
+                    <marker date="1496717607000" expanded="true" signature="4120:4210" ph="Create Table... ?" />
+                    <marker date="1496717607000" expanded="true" signature="4578:4626" ph="INSERT INTO Artists... " />
+                    <marker date="1496717607000" expanded="true" signature="4584:4626" ph="insert into Artists... " />
+                    <marker date="1496717607000" expanded="true" signature="5037:5120" ph="INSERT INTO missingValue... " />
+                    <marker date="1496717607000" expanded="true" signature="5043:5120" ph="Insert into missingValue... " />
+                    <marker date="1496717607000" expanded="true" signature="5480:5561" ph="INSERT INTO 'missingValue'... " />
+                    <marker date="1496717607000" expanded="true" signature="6123:6134" ph="DROP table m... " />
+                    <marker date="1496717607000" expanded="true" signature="6123:6135" ph="DROP TABLE '... " />
+                    <marker date="1496717607000" expanded="true" signature="6123:6150" ph="DROP TABLE '... " />
+                    <marker date="1496717607000" expanded="true" signature="6178:6219" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6178:6221" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6736" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6765" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6766" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6825" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6826" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6862" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="7303:7340" ph="SELECT Quant... missingValue" />
+                    <marker date="1496717607000" expanded="true" signature="7968:8010" ph="SELECT Copie... Artists" />
+                    <marker date="1496717607000" expanded="true" signature="7968:8025" ph="SELECT Copie... Artists" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ArtistName.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Records/ArtistName.java">
+          <file leaf-file-name="RecordOutputController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Records/RecordOutputController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-                  <folding />
+                <state relative-caret-position="-945">
+                  <caret line="92" column="61" lean-forward="false" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
+                  <folding>
+                    <element signature="e#9590#9591#0" expanded="true" />
+                    <element signature="e#9648#9649#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.Artists" pinned="false" current-in-tab="false">
+          <file leaf-file-name="main.Artists" pinned="false" current-in-tab="true">
             <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Artists">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
               <provider editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
                 </state>
               </provider>
             </entry>
@@ -182,12 +189,40 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="RecordOutputController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Records/RecordOutputController.java">
+          <file leaf-file-name="RecordModel.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Records/RecordModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="358">
-                  <caret line="89" column="86" lean-forward="false" selection-start-line="89" selection-start-column="86" selection-end-line="89" selection-end-column="86" />
-                  <folding />
+                <state relative-caret-position="30">
+                  <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                  <folding>
+                    <marker date="1496717607000" expanded="true" signature="794:815" ph="SELECT * FRO... Artists" />
+                    <marker date="1496717607000" expanded="true" signature="1295:1308" ph="SELECT * FRO... " />
+                    <marker date="1496717607000" expanded="true" signature="1295:1310" ph="SELECT * FRO... " />
+                    <marker date="1496717607000" expanded="true" signature="1295:1329" ph="SELECT * FRO... missingValue" />
+                    <marker date="1496717607000" expanded="true" signature="1590:1652" ph="UPDATE Artis... " />
+                    <marker date="1496717607000" expanded="true" signature="2269:2322" ph="UPDATE Artis... " />
+                    <marker date="1496717607000" expanded="true" signature="3069:3204" ph="UPDATE missi... " />
+                    <marker date="1496717607000" expanded="true" signature="4120:4133" ph="Create Table... missingValue" />
+                    <marker date="1496717607000" expanded="true" signature="4120:4210" ph="Create Table... ?" />
+                    <marker date="1496717607000" expanded="true" signature="4578:4626" ph="INSERT INTO Artists... " />
+                    <marker date="1496717607000" expanded="true" signature="4584:4626" ph="insert into Artists... " />
+                    <marker date="1496717607000" expanded="true" signature="5037:5120" ph="INSERT INTO missingValue... " />
+                    <marker date="1496717607000" expanded="true" signature="5043:5120" ph="Insert into missingValue... " />
+                    <marker date="1496717607000" expanded="true" signature="5480:5561" ph="INSERT INTO 'missingValue'... " />
+                    <marker date="1496717607000" expanded="true" signature="6123:6134" ph="DROP table m... " />
+                    <marker date="1496717607000" expanded="true" signature="6123:6135" ph="DROP TABLE '... " />
+                    <marker date="1496717607000" expanded="true" signature="6123:6150" ph="DROP TABLE '... " />
+                    <marker date="1496717607000" expanded="true" signature="6178:6219" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6178:6221" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6736" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6765" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6766" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6825" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6826" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="6724:6862" ph="DELETE FROM " />
+                    <marker date="1496717607000" expanded="true" signature="7303:7340" ph="SELECT Quant... missingValue" />
+                    <marker date="1496717607000" expanded="true" signature="7968:8025" ph="SELECT Copie... Artists" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -227,14 +262,15 @@
         <option value="dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Artists" />
         <option value="dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon" />
         <option value="$PROJECT_DIR$/src/Records/DataBaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/Records/RecordItems.java" />
         <option value="$PROJECT_DIR$/src/Records/AddNewArtistPage.fxml" />
-        <option value="dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Sound City" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/console.sql" />
         <option value="dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Gorillaz" />
         <option value="$PROJECT_DIR$/src/Records/PopUpWind.java" />
-        <option value="$PROJECT_DIR$/src/Records/RecordOutputController.java" />
+        <option value="$PROJECT_DIR$/out/production/RecordsAppJava/Records/ArtistName.class" />
+        <option value="$PROJECT_DIR$/src/Records/RecordItems.java" />
+        <option value="dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Sound City" />
         <option value="$PROJECT_DIR$/src/Records/RecordModel.java" />
+        <option value="$PROJECT_DIR$/src/Records/RecordOutputController.java" />
       </list>
     </option>
   </component>
@@ -272,6 +308,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -305,7 +342,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,10 +356,15 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="recordsappjava" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -775,12 +816,13 @@
       <workItem from="1496003378921" duration="19630000" />
       <workItem from="1496273331675" duration="17502000" />
       <workItem from="1496370863216" duration="2509000" />
-      <workItem from="1496606874482" duration="6897000" />
+      <workItem from="1496606874482" duration="9696000" />
+      <workItem from="1496624448752" duration="11840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65011000" />
+    <option name="totallyTimeSpent" value="79650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -796,28 +838,30 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0256917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.4947644" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.088924386" sideWeight="0.473822" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.4947644" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4693676" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26778656" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24505928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.088924386" sideWeight="0.526178" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23715416" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10010649" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.088924386" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1400426" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -829,7 +873,6 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -853,246 +896,23 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/module_recordsappjava.xml">
+      <expanded value="true" />
+    </buildFile>
+    <buildFile url="file://$PROJECT_DIR$/recordsappjava.xml">
+      <expanded value="true" />
+    </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/javafx.fxml/javafx/fxml/Initializable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="53" column="16" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="2549" column="0" lean-forward="false" selection-start-line="2549" selection-start-column="0" selection-end-line="2549" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/sqlite-jdbc-3.18.0.jar!/org/sqlite/core/DB.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Circa Survive">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Circa Survive">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Circa Survive">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Circa Survive">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Circa Survive">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Circa Survive">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Anthony Green">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1129,46 +949,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/java.sql/java/sql/PreparedStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="94" column="8" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Try">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Trying">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Records/RecordItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding>
-            <element signature="e#621#622#0" expanded="false" />
-            <element signature="e#648#649#0" expanded="false" />
-          </folding>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1184,38 +985,26 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.test">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.yo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Sound City">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1226,52 +1015,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Gorillaz">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Chon">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Records/test.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Records/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Records/PopUpWind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Records/test.form" />
+    <entry file="file://$PROJECT_DIR$/src/Records/test.java" />
+    <entry file="file://$PROJECT_DIR$/src/Records/PopUpWind.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/javafx.base/javafx/event/EventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1280,67 +1038,347 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Records/RecordOutput.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/Records/ArtistName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="375">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#296#297#0" expanded="false" />
+            <element signature="e#323#324#0" expanded="false" />
+            <element signature="e#363#364#0" expanded="false" />
+            <element signature="e#395#396#0" expanded="false" />
+            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#549#550#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Artists">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="jar://$USER_HOME$/Downloads/sqlite-jdbc-3.18.0.jar!/org/sqlite/jdbc3/JDBC3Connection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecordsAppJava.iml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Records/RecordOutputController.java">
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="73" column="71" lean-forward="false" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Records/ArtistName.java">
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/description.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recordsappjava.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recordsappjava.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1970">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module_recordsappjava.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/RecordsAppJava/Records/RecordItems.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/RecordsAppJava/Records/ArtistName.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#762#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/RecordsAppJava/Records/DataBaseConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2713">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-927">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/javafx.controls/javafx/scene/control/TableView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="1604" column="16" lean-forward="false" selection-start-line="1604" selection-start-column="16" selection-end-line="1604" selection-end-column="16" />
+          <folding>
+            <element signature="e#70802#70803#0" expanded="false" />
+            <element signature="e#70872#70873#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Records/RecordOutput.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="17" column="110" lean-forward="false" selection-start-line="17" selection-start-column="110" selection-end-line="17" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Circa Survive">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Gorillaz">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Sound City">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Van Halen">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/java.sql/java/sql/PreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="94" column="8" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Records/RecordItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Van Halen">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/javafx.base/com/sun/javafx/event/BasicEventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Records/RecordModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="159" column="8" lean-forward="false" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="8" />
+        <state relative-caret-position="3360">
+          <caret line="224" column="30" lean-forward="false" selection-start-line="224" selection-start-column="30" selection-end-line="224" selection-end-column="30" />
           <folding>
-            <marker date="1496620838000" expanded="true" signature="793:814" ph="SELECT * FRO... Artists" />
-            <marker date="1496620838000" expanded="true" signature="1294:1307" ph="SELECT * FRO... " />
-            <marker date="1496620838000" expanded="true" signature="1294:1309" ph="SELECT * FRO... " />
-            <marker date="1496620838000" expanded="true" signature="1294:1328" ph="SELECT * FRO... missingValue" />
-            <marker date="1496620838000" expanded="true" signature="1589:1651" ph="UPDATE Artis... " />
-            <marker date="1496620838000" expanded="true" signature="2263:2393" ph="UPDATE missi... " />
-            <marker date="1496620838000" expanded="true" signature="3107:3120" ph="Create Table... missingValue" />
-            <marker date="1496620838000" expanded="true" signature="3107:3195" ph="Create Table... ?" />
-            <marker date="1496620838000" expanded="true" signature="3563:3611" ph="INSERT INTO Artists... " />
-            <marker date="1496620838000" expanded="true" signature="3569:3611" ph="insert into Artists... " />
-            <marker date="1496620838000" expanded="true" signature="4021:4102" ph="INSERT INTO missingValue... " />
-            <marker date="1496620838000" expanded="true" signature="4027:4102" ph="Insert into missingValue... " />
-            <marker date="1496620838000" expanded="true" signature="4452:4463" ph="DROP table m... " />
-            <marker date="1496620838000" expanded="true" signature="4500:4541" ph="DELETE FROM " />
-            <marker date="1496620838000" expanded="true" signature="4500:4543" ph="DELETE FROM " />
+            <marker date="1496717607000" expanded="true" signature="794:815" ph="SELECT * FRO... Artists" />
+            <marker date="1496717607000" expanded="true" signature="1295:1308" ph="SELECT * FRO... " />
+            <marker date="1496717607000" expanded="true" signature="1295:1310" ph="SELECT * FRO... " />
+            <marker date="1496717607000" expanded="true" signature="1295:1329" ph="SELECT * FRO... missingValue" />
+            <marker date="1496717607000" expanded="true" signature="1590:1652" ph="UPDATE Artis... " />
+            <marker date="1496717607000" expanded="true" signature="2269:2322" ph="UPDATE Artis... " />
+            <marker date="1496717607000" expanded="true" signature="3069:3204" ph="UPDATE missi... " />
+            <marker date="1496717607000" expanded="true" signature="4120:4133" ph="Create Table... missingValue" />
+            <marker date="1496717607000" expanded="true" signature="4120:4210" ph="Create Table... ?" />
+            <marker date="1496717607000" expanded="true" signature="4578:4626" ph="INSERT INTO Artists... " />
+            <marker date="1496717607000" expanded="true" signature="4584:4626" ph="insert into Artists... " />
+            <marker date="1496717607000" expanded="true" signature="5037:5120" ph="INSERT INTO missingValue... " />
+            <marker date="1496717607000" expanded="true" signature="5043:5120" ph="Insert into missingValue... " />
+            <marker date="1496717607000" expanded="true" signature="5480:5561" ph="INSERT INTO 'missingValue'... " />
+            <marker date="1496717607000" expanded="true" signature="6123:6134" ph="DROP table m... " />
+            <marker date="1496717607000" expanded="true" signature="6123:6135" ph="DROP TABLE '... " />
+            <marker date="1496717607000" expanded="true" signature="6123:6150" ph="DROP TABLE '... " />
+            <marker date="1496717607000" expanded="true" signature="6178:6219" ph="DELETE FROM " />
+            <marker date="1496717607000" expanded="true" signature="6178:6221" ph="DELETE FROM " />
+            <marker date="1496717607000" expanded="true" signature="6724:6736" ph="DELETE FROM " />
+            <marker date="1496717607000" expanded="true" signature="6724:6765" ph="DELETE FROM " />
+            <marker date="1496717607000" expanded="true" signature="6724:6766" ph="DELETE FROM " />
+            <marker date="1496717607000" expanded="true" signature="6724:6825" ph="DELETE FROM " />
+            <marker date="1496717607000" expanded="true" signature="6724:6826" ph="DELETE FROM " />
+            <marker date="1496717607000" expanded="true" signature="6724:6862" ph="DELETE FROM " />
+            <marker date="1496717607000" expanded="true" signature="7303:7340" ph="SELECT Quant... missingValue" />
+            <marker date="1496717607000" expanded="true" signature="7968:8010" ph="SELECT Copie... Artists" />
+            <marker date="1496717607000" expanded="true" signature="7968:8025" ph="SELECT Copie... Artists" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Records/RecordOutputController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-945">
+          <caret line="92" column="61" lean-forward="false" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
+          <folding>
+            <element signature="e#9590#9591#0" expanded="true" />
+            <element signature="e#9648#9649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/5b5c2c80/3db220f7-3a5f-41c3-a1ac-660c5b8c2bc4/main.Artists">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1355,7 +1393,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -10,6 +10,12 @@ public class RecordItems {
     private String album;
     private String name;
 
+    /**
+     * @param quantity
+     * @param year
+     * @param variant
+     * @param album
+     */
     public RecordItems(String quantity, String year, String variant, String album) {
         this.quantity = quantity;
         this.year = year;
@@ -17,14 +23,26 @@ public class RecordItems {
         this.album = album;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getQuantity() {
         return quantity;
     }
 
+    /**
+     *
+     * @param quantity
+     */
     public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getYear() {
         return year;
     }

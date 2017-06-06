@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_recordsappjava" default="compile.module.recordsappjava">
+  <dirname property="module.recordsappjava.basedir" file="${ant.file.module_recordsappjava}"/>
+  
+  <property name="module.jdk.home.recordsappjava" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.recordsappjava" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.recordsappjava" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.recordsappjava" value="-encoding UTF-8 -source 9 -target 9 ${compiler.args}"/>
+  
+  <property name="recordsappjava.output.dir" value="${module.recordsappjava.basedir}/out/production/RecordsAppJava"/>
+  <property name="recordsappjava.testoutput.dir" value="${module.recordsappjava.basedir}/out/test/RecordsAppJava"/>
+  
+  <path id="recordsappjava.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="recordsappjava.module.production.classpath">
+    <path refid="${module.jdk.classpath.recordsappjava}"/>
+    <pathelement location="${basedir}/../../Downloads/sqlite-jdbc-3.18.0.jar"/>
+  </path>
+  
+  <path id="recordsappjava.runtime.production.module.classpath">
+    <pathelement location="${recordsappjava.output.dir}"/>
+    <pathelement location="${basedir}/../../Downloads/sqlite-jdbc-3.18.0.jar"/>
+  </path>
+  
+  <path id="recordsappjava.module.classpath">
+    <path refid="${module.jdk.classpath.recordsappjava}"/>
+    <pathelement location="${recordsappjava.output.dir}"/>
+    <pathelement location="${basedir}/../../Downloads/sqlite-jdbc-3.18.0.jar"/>
+  </path>
+  
+  <path id="recordsappjava.runtime.module.classpath">
+    <pathelement location="${recordsappjava.testoutput.dir}"/>
+    <pathelement location="${recordsappjava.output.dir}"/>
+    <pathelement location="${basedir}/../../Downloads/sqlite-jdbc-3.18.0.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.recordsappjava">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.recordsappjava">
+    <patternset refid="excluded.from.module.recordsappjava"/>
+  </patternset>
+  
+  <path id="recordsappjava.module.sourcepath">
+    <dirset dir="${module.recordsappjava.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.recordsappjava" depends="compile.module.recordsappjava.production,compile.module.recordsappjava.tests" description="Compile module RecordsAppJava"/>
+  
+  <target name="compile.module.recordsappjava.production" depends="register.custom.compilers" description="Compile module RecordsAppJava; production classes">
+    <mkdir dir="${recordsappjava.output.dir}"/>
+    <javac2 destdir="${recordsappjava.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.recordsappjava}/javac">
+      <compilerarg line="${compiler.args.recordsappjava}"/>
+      <bootclasspath refid="recordsappjava.module.bootclasspath"/>
+      <classpath refid="recordsappjava.module.production.classpath"/>
+      <src refid="recordsappjava.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.recordsappjava"/>
+    </javac2>
+    
+    <copy todir="${recordsappjava.output.dir}">
+      <fileset dir="${module.recordsappjava.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.recordsappjava.tests" depends="register.custom.compilers,compile.module.recordsappjava.production" description="compile module RecordsAppJava; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.recordsappjava" description="cleanup module">
+    <delete dir="${recordsappjava.output.dir}"/>
+    <delete dir="${recordsappjava.testoutput.dir}"/>
+  </target>
+</project>

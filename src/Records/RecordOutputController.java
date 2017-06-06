@@ -16,6 +16,7 @@ package Records;
 
  import java.net.URL;
  import java.sql.*;
+ import java.util.Comparator;
  import java.util.ResourceBundle;
 
 
@@ -26,9 +27,9 @@ public class RecordOutputController  implements Initializable {
 
    private RecordModel recordModel = new RecordModel();
    private MenuItem men = new MenuItem("Delete");
-   private  ContextMenu deleteItemFromSelectorView = new ContextMenu(men);
-
-
+   private ContextMenu deleteItemFromSelectorView = new ContextMenu(men);
+   private MenuItem men2  = new MenuItem("Delete");
+   private ContextMenu deleteItemFromDetailsView = new ContextMenu(men2);
 
    //lists all albums and informatin for Artist
     @FXML
@@ -63,6 +64,9 @@ public class RecordOutputController  implements Initializable {
     private TableColumn<RecordItems, String> Album;
 
 
+    @FXML
+    private Label totalLabel;
+
     @Override
    public void initialize(URL location, ResourceBundle resources) {
          if (recordModel.isDbConnected()) {
@@ -86,15 +90,28 @@ public class RecordOutputController  implements Initializable {
              Variant.setOnEditCommit(artistItemCellModified);
              Album.setCellFactory(TextFieldTableCell.forTableColumn());
              Album.setOnEditCommit(artistItemCellModified);
-            men.setOnAction(event ->  {recordModel.deleteArtistAndInformation(
+             Album.setContextMenu(deleteItemFromDetailsView);
+             men.setOnAction(event ->  {recordModel.deleteArtistAndInformation(
                     artistSelectorView.getSelectionModel().getSelectedItem().getName());
-                    updateArtistSelectorView();});
+                    updateArtistSelectorView();
+                    clearDetailsForArtist();});
+             men2.setOnAction(event -> {
+                 String name = allDetailsForArtistView.getSelectionModel().getSelectedItem().getName();
+                 recordModel.deleteRecordFromTable(allDetailsForArtistView.getSelectionModel().getSelectedItem());
+                 updateAllDetailsForArtistView(name);
+                 recordModel.checkAndSaveQuantities(name);
+                 updateArtistSelectorView();
+             });
              updateArtistSelectorView();
          } else {
              System.out.println("Not connected");
          }
    }
 
+    /**
+     *
+     * @param artist
+     */
    private void updateAllDetailsForArtistView(String artist) {
        ObservableList<RecordItems> data  = FXCollections.observableArrayList();
        if (artist != "") {
@@ -109,7 +126,7 @@ public class RecordOutputController  implements Initializable {
                    data.add(recordItems);
                    recordItems.setName(artist);
                } //end while
-
+               data.sort(Comparator.comparing(RecordItems::getAlbum));
                RecordItems recordItems = new RecordItems(" ", " ", " ", " ");
                recordItems.setName(artist);
                data.add(recordItems);
@@ -126,17 +143,21 @@ public class RecordOutputController  implements Initializable {
    private void updateArtistSelectorView() {
         ObservableList<ArtistName> data = FXCollections.observableArrayList();
 
+        int total = 0;
        ResultSet resultSet = recordModel.getArtistList();
        if (resultSet == null)
            System.out.println("could not update ArtistView");
        else try {
            while (resultSet.next()) {
                ArtistName artist = new ArtistName(resultSet.getString(1), resultSet.getString(2));
+               total += Integer.parseInt(resultSet.getString(2));
                data.add(artist);
            }
+                data.sort(Comparator.comparing(ArtistName::getName));
                 ArtistName artist = new ArtistName("", "");
                 data.add(artist);
            artistSelectorView.setItems(data);
+           totalLabel.setText("Total Quantity: " + Integer.toString(total));
        } catch (SQLException e) {
            e.printStackTrace();
        }
@@ -155,7 +176,12 @@ public class RecordOutputController  implements Initializable {
         }
     }
 
-
+    @FXML
+    public void detailClickedItem(MouseEvent event) {
+        if (event.getButton() == MouseButton.SECONDARY) {
+            deleteItemFromDetailsView.show(allDetailsForArtistView, event.getScreenX(), event.getSceneY());
+        }
+    }
 
     private EventHandler artistSelectorCellModified = new EventHandler<CellEditEvent<ArtistName, String>>() {
         @Override
@@ -177,7 +203,7 @@ public class RecordOutputController  implements Initializable {
                 {
                     recordModel.createNewTableForArtist(t.getNewValue());
                     recordModel.addNewArtistToTable(t.getNewValue());
-                    recordModel.creatNewRow(t.getNewValue());
+                    recordModel.createNewRow(t.getNewValue());
                     updateArtistSelectorView();
                 }
             }
@@ -187,25 +213,43 @@ public class RecordOutputController  implements Initializable {
     };
 
     private EventHandler artistItemCellModified = (EventHandler<CellEditEvent<RecordItems, String>>) t -> {
+        int tempCount = 0;
         RecordItems changedItemObject = t.getRowValue();
         String albumName = changedItemObject.getAlbum();
         String value = t.getNewValue();
 
         switch (t.getTablePosition().getColumn())
         {
-            case 0 : changedItemObject.setAlbum(value);
+            case 0 :{
+                changedItemObject.setAlbum(value);
+                recordModel.saveNewArtistItem(changedItemObject, albumName, changedItemObject.getName());
+                updateAllDetailsForArtistView(changedItemObject.getName());
+            }
                 break;
-            case 1: changedItemObject.setQuantity(value);
+            case 1: {changedItemObject.setQuantity(value);
+                recordModel.saveNewArtistItem(changedItemObject, albumName, changedItemObject.getName());
+                recordModel.checkAndSaveQuantities(changedItemObject.getName());
+                updateArtistSelectorView();
+            }
                 break;
-            case 2: changedItemObject.setYear(value);
+            case 2: {
+                changedItemObject.setYear(value);
+                recordModel.saveNewArtistItem(changedItemObject, albumName, changedItemObject.getName());
+
+            }
                 break;
-            case 3: changedItemObject.setVariant(value);
+            case 3: {
+                changedItemObject.setVariant(value);
+                recordModel.saveNewArtistItem(changedItemObject, albumName, changedItemObject.getName());
+            }
                 break;
             default:
-            System.out.println("item not set");
+                System.out.println("item not set");
         }
-        recordModel.saveNewArtistItem(changedItemObject, albumName, changedItemObject.getName());
     };
 
+    private void clearDetailsForArtist() {
+        allDetailsForArtistView.getItems().clear();
+    }
 
 }

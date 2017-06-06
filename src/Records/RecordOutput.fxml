@@ -7,26 +7,34 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="679.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Records.RecordOutputController">
+<AnchorPane prefHeight="715.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Records.RecordOutputController">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" prefHeight="679.0" prefWidth="948.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="278.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="669.0" prefWidth="277.0">
                <children>
-                  <TableView fx:id="artistSelectorView" editable="true" onMouseClicked="#clickItem" prefHeight="518.0" prefWidth="242.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <columns>
-                      <TableColumn fx:id="artistNameCol" prefWidth="75.0" text="Artists" />
-                      <TableColumn fx:id="quantityCol" prefWidth="75.0" text="Quantity" />
-                    </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                  </TableView>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="artistSelectorView" editable="true" layoutY="-1.0" onMouseClicked="#clickItem" prefHeight="681.0" prefWidth="290.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="artistNameCol" prefWidth="141.0" text="Artists" />
+                            <TableColumn fx:id="quantityCol" prefWidth="147.0" text="Quantity" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Label fx:id="totalLabel" layoutY="679.0" prefHeight="33.0" prefWidth="290.0" text="Total Quantity: " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin></Label>
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TableView fx:id="allDetailsForArtistView" editable="true" prefHeight="400.0" prefWidth="416.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="allDetailsForArtistView" editable="true" onMouseClicked="#detailClickedItem" prefHeight="400.0" prefWidth="416.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
                       <TableColumn fx:id="Album" prefWidth="75.0" text="Album" />
                       <TableColumn fx:id="Quantity" prefWidth="75.0" text="Quantity" />
